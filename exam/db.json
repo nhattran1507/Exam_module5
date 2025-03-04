@@ -1,0 +1,166 @@
+{
+  "products": [
+    {
+      "id": "P001",
+      "name": "Áo Thun Nam",
+      "date": "2025-02-20",
+      "quantity": 25,
+      "categoryId": "C001"
+    },
+    {
+      "id": "P002",
+      "name": "Quần Jean Nữ",
+      "date": "2025-02-18",
+      "quantity": 20,
+      "categoryId": "C002"
+    },
+    {
+      "id": "P003",
+      "name": "Giày Sneaker",
+      "date": "2025-02-15",
+      "quantity": 30,
+      "categoryId": "C003"
+    },
+    {
+      "id": "P004",
+      "name": "Áo Sơ Mi Trắng",
+      "date": "2025-02-10",
+      "quantity": 15,
+      "categoryId": "C001"
+    },
+    {
+      "id": "P005",
+      "name": "Quần Tây Công Sở",
+      "date": "2025-02-12",
+      "quantity": 18,
+      "categoryId": "C002"
+    },
+    {
+      "id": "P006",
+      "name": "Giày Thể Thao Nam",
+      "date": "2025-02-14",
+      "quantity": 22,
+      "categoryId": "C003"
+    },
+    {
+      "id": "P007",
+      "name": "Áo Hoodie Unisex",
+      "date": "2025-02-05",
+      "quantity": 27,
+      "categoryId": "C001"
+    },
+    {
+      "id": "P008",
+      "name": "Quần Jogger Nam",
+      "date": "2025-02-07",
+      "quantity": 35,
+      "categoryId": "C002"
+    },
+    {
+      "id": "P009",
+      "name": "Giày Cao Gót Nữ",
+      "date": "2025-02-03",
+      "quantity": 12,
+      "categoryId": "C003"
+    },
+    {
+      "id": "P010",
+      "name": "Balo Laptop",
+      "date": "2025-02-02",
+      "quantity": 40,
+      "categoryId": "C004"
+    },
+    {
+      "id": "P011",
+      "name": "Túi Đeo Chéo Nam",
+      "date": "2025-02-06",
+      "quantity": 18,
+      "categoryId": "C004"
+    },
+    {
+      "id": "P012",
+      "name": "Mũ Lưỡi Trai",
+      "date": "2025-02-08",
+      "quantity": 50,
+      "categoryId": "C005"
+    },
+    {
+      "id": "P013",
+      "name": "Đồng Hồ Nam Cao Cấp",
+      "date": "2025-02-09",
+      "quantity": 10,
+      "categoryId": "C005"
+    },
+    {
+      "id": "P014",
+      "name": "Áo Len Dày",
+      "date": "2025-02-01",
+      "quantity": 22,
+      "categoryId": "C001"
+    },
+    {
+      "id": "P015",
+      "name": "Quần Lửng Thể Thao",
+      "date": "2025-02-11",
+      "quantity": 28,
+      "categoryId": "C002"
+    },
+    {
+      "id": "P016",
+      "name": "Giày Sandal",
+      "date": "2025-02-16",
+      "quantity": 15,
+      "categoryId": "C003"
+    },
+    {
+      "id": "P017",
+      "name": "Cặp Da Công Sở",
+      "date": "2025-02-19",
+      "quantity": 20,
+      "categoryId": "C004"
+    },
+    {
+      "id": "P018",
+      "name": "Thắt Lưng Da",
+      "date": "2025-02-13",
+      "quantity": 30,
+      "categoryId": "C005"
+    },
+    {
+      "id": "P019",
+      "name": "Mũ Len",
+      "date": "2025-02-04",
+      "quantity": 45,
+      "categoryId": "C005"
+    },
+    {
+      "id": "P020",
+      "name": "Găng Tay Chống Nắng",
+      "date": "2025-02-17",
+      "quantity": 32,
+      "categoryId": "C005"
+    }
+  ],
+  "categories": [
+    {
+      "id": "C001",
+      "name": "Áo"
+    },
+    {
+      "id": "C002",
+      "name": "Quần"
+    },
+    {
+      "id": "C003",
+      "name": "Giày"
+    },
+    {
+      "id": "C004",
+      "name": "Túi xách & Balo"
+    },
+    {
+      "id": "C005",
+      "name": "Phụ kiện"
+    }
+  ]
+}
