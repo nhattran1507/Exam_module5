@@ -27,7 +27,6 @@ const ProductList = () => {
             try {
                 const productData = await productService.getProducts();
                 const categoryData = await productService.getCategories();
-
                 const sortedProducts = productData.sort((a, b) => a.quantity - b.quantity);
                 setProducts(sortedProducts);
                 setCategories(categoryData);
@@ -51,10 +50,10 @@ const ProductList = () => {
 
     const handleSearch = () => {
         const filtered = products.filter((product) => {
-            return (
-                (searchTerm === "" || product.name.toLowerCase().includes(searchTerm.toLowerCase())) &&
-                (selectedCategory === "" || product.categoryId === selectedCategory)
-            );
+            const matchName =
+                searchTerm === "" || product.name.toLowerCase().includes(searchTerm.toLowerCase());
+            const matchCategory = selectedCategory === "" || product.categoryId === selectedCategory;
+            return matchName && matchCategory;
         });
         setFilteredProducts(filtered);
     };
@@ -63,7 +62,6 @@ const ProductList = () => {
         <Card className="shadow-lg p-4 mb-5">
             <Card.Body>
                 {alertMessage && <Alert variant="success">{alertMessage}</Alert>}
-
                 <div className="d-flex gap-3 mb-4">
                     <Form.Control
                         type="text"
@@ -77,10 +75,19 @@ const ProductList = () => {
                     >
                         <option value="">Tất cả loại sản phẩm</option>
                         {categories.map((category) => (
-                            <option key={category.id} value={category.id}>{category.name}</option>
+                            <option key={category.id} value={category.id}>
+                                {category.name}
+                            </option>
                         ))}
                     </Form.Select>
-                    <Button variant="primary" onClick={handleSearch}>Tìm kiếm</Button>
+                    <Button
+                        variant="light"
+                        className="rounded-pill text-dark px-3 fw-bold"
+                        onClick={handleSearch}
+                        style={{ border: "2px solid #28a745" }}
+                    >
+                        Tìm kiếm
+                    </Button>
                 </div>
 
                 {filteredProducts.length === 0 ? (
@@ -109,9 +116,10 @@ const ProductList = () => {
                                 <td className="text-capitalize">{getCategoryName(product.categoryId)}</td>
                                 <td>
                                     <Button
-                                        variant="warning"
-                                        className="d-flex align-items-center gap-2 mx-auto"
+                                        variant="light"
+                                        className="rounded-pill text-dark px-3 fw-bold d-flex align-items-center gap-2 mx-auto"
                                         onClick={() => navigate(`/edit/${product.id}`)}
+                                        style={{ border: "2px solid #008080" }}
                                     >
                                         <PencilSquare /> Cập nhật
                                     </Button>

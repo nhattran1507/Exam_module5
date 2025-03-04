@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
-import {Form, Button, Card, Alert} from "react-bootstrap";
-import {useNavigate, useParams} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Form, Button, Card, Alert } from "react-bootstrap";
+import { useNavigate, useParams } from "react-router-dom";
 import productService from "../services/productService";
 
 const EditProduct = () => {
-    const {id} = useParams();
+    const { id } = useParams();
     const navigate = useNavigate();
 
     const [product, setProduct] = useState(null);
@@ -58,7 +58,7 @@ const EditProduct = () => {
         const isoDay = String(checkDate.getDate()).padStart(2, "0");
         product.date = `${isoYear}-${isoMonth}-${isoDay}`;
         await productService.updateProduct(id, product);
-        navigate("/", {state: {success: true, message: "Cập nhật thành công!"}});
+        navigate("/", { state: { success: true, message: "Cập nhật thành công!" } });
     };
 
     if (!product) return <p>Loading...</p>;
@@ -97,7 +97,7 @@ const EditProduct = () => {
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Label>Ngày nhập (dd/MM/yyyy)</Form.Label>
+                        <Form.Label>Ngày nhập</Form.Label>
                         <Form.Control
                             type="text"
                             name="dateString"
@@ -119,10 +119,32 @@ const EditProduct = () => {
                     </Form.Group>
 
                     <div className="d-flex gap-2">
-                        <Button variant="primary" type="submit">
+                        <Button
+                            type="submit"
+                            style={{
+                                backgroundColor: "#fff",
+                                border: "2px solid #007bff",
+                                borderRadius: "50px",
+                                color: "#007bff",
+                                padding: "0.5rem 1.5rem",
+                                fontWeight: "600"
+                            }}
+                        >
                             Lưu thay đổi
                         </Button>
-                        <Button variant="secondary" onClick={() => navigate("/")}>
+
+                        <Button
+                            variant="light"
+                            onClick={() => navigate("/")}
+                            style={{
+                                backgroundColor: "#fff",
+                                border: "2px solid #dc3545",
+                                borderRadius: "50px",
+                                color: "#dc3545",
+                                padding: "0.5rem 1.5rem",
+                                fontWeight: "600"
+                            }}
+                        >
                             Hủy thay đổi
                         </Button>
                     </div>
